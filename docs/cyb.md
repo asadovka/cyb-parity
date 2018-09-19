@@ -1,21 +1,24 @@
-# Cyb: Front door to blockchain universe
+# Cyb: web3 browser
 
 # Overview
 
 Cyb is a blockchain browser with integrated DApp platform. Browser consists of two main parts:
 
-1. Shell, which alows:
+1. Core, which alows:
 
-- search in blockchains and Dapps, and IPFS content
+- search inside blockchains, Dapps and IPFS content
 - deploy and manage Dapps for users
-- show desync state of user and blockchain
-- manage user's account data (sign transactions, create custom feed)
+- manage user's account data (wallet - sign transactions, create custom feed)
+- manage connection to cybernode
 
 2. DApps, which:
 
-- use cyber.Search services for data obtaining (cyber.Search, cyber.Markets, cybernode)
+- can be locally developed and ran in Cyb
+- can be obtained via hash through Chaingear
+- can be accessed with Cyb distributive (core apps)
+- use cyybernode for data obtaining
 - are stored in IPFS
-- can interract with user and each other
+- can interact with user and each other
 
 
 # Principles
@@ -77,10 +80,15 @@ Blockchain data is too complicated and sometimes not obvious for people. Thus we
 
 ## 3. Development
 
-## 3.1 Shell development
+## 3.1 Core development
 
 ## 3.2 DApps development
 
 ## 3.3 DApps deployment
 
 ## 3.4 DApps interaction
+
+## 4. Cybernode
+
+### 4.1 Cybernode connection
+
