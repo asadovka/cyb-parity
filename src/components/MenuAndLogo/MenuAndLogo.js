@@ -14,9 +14,13 @@ export const Menu = ({ children, open }) => (
 
 export const MenuItem = ({ children, to, icon, open = true, ...props }) => (
   <li className={styles.menuItem}>
-    {to ? (<Link to={to} activeClassName={styles.menuItemActive} className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')} {...props} >
-      {children}
-    </Link>) : <a href='/' className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')} {...props}>{children}</a>}
+    {to ?
+      (
+        <Link to={to} activeClassName={styles.menuItemActive} className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')} {...props} >
+          {children}
+        </Link>
+      )
+      : <a href='/' className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')} {...props}>{children}</a>}
   </li>
 );
 

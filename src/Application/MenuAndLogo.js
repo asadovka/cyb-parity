@@ -5,10 +5,11 @@ import {
   Logo,
   HamburgerMenu
 } from '../components/MenuAndLogo/MenuAndLogo';
+import builtinApps from '../Dapps/dappsBuiltin.json';
 
 class MenuAndLogo extends Component {
   state = {
-    menuOpen: false,
+    menuOpen: false
   }
 
     toggle = () => {
@@ -35,18 +36,26 @@ class MenuAndLogo extends Component {
       search
     } = this.props
 
+    const onMenuItemClick = () => {
+      this.setState({
+        menuOpen: false
+      })
+    }
+
     return (
       <div>
-              {/*<HamburgerMenu open={menuOpen} onClick={this.toggle}>
-                <Menu open={true} >
-                  <MenuItem onClick={(e) => this.click(e, '42.exp')} icon='explorer' >Ethereum</MenuItem>
-                  <MenuItem onClick={(e) => this.click(e, '.chainger')} icon='chaingear' >Chaingear</MenuItem>
-                  <MenuItem onClick={(e) => this.click(e, '.tokens')} icon='tokens' >Tokens</MenuItem>
-                </Menu>
-              </HamburgerMenu>*/}
-              <Logo to='/'>logo</Logo>
-            </div>
-        )
+        <HamburgerMenu open={menuOpen} onClick={this.toggle}>
+          <Menu open={true} >
+            {
+              builtinApps.map((app) => {
+                return <MenuItem onClick={ onMenuItemClick } icon='explorer' to={ `/${app.id}` } key={ app.id }>{app.name}</MenuItem>;
+              })
+            }
+          </Menu>
+        </HamburgerMenu>
+        <Logo to='/'>logo</Logo>
+      </div>
+    );
   }
 
 }
