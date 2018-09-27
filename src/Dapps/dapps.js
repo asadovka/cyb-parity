@@ -114,9 +114,15 @@ class Dapps extends Component {
     const { showDeployModal } = this.state;
 
     return (
-      <Page className={ styles.layout }>
-        {this.renderSection(this.store.pinnedApps)}
-        {this.renderSection(this.store.visibleUnpinned)}
+      <div className={ styles.layout }>
+        <div><h2>Local applications</h2>
+          {this.renderSection(this.store.sortedLocal)}
+        </div>
+        <div><h2>Remote applications</h2>
+          {this.renderSection(this.store.sortedNetwork)}
+        </div>
+{/*        {this.renderSection(this.store.pinnedApps)}
+        {this.renderSection(this.store.visibleUnpinned)}*/}
         {
           this.store.externalOverlayVisible &&
           (
@@ -171,7 +177,7 @@ class Dapps extends Component {
           </Modal>
         }
 
-      </Page>
+      </div>
     );
   }
 

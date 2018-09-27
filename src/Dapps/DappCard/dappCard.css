@@ -17,7 +17,10 @@
 
 .card {
   position: relative;
+  /*
   margin-top: 3em;
+  */
+  margin-bottom: 1em;
 
   .pin {
     display: none;

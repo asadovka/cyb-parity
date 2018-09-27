@@ -49,13 +49,13 @@ export default class DappCard extends Component {
 
     return (
       <div className={ [styles.card, className].join(' ') }>
-        <Button
+        {/*<Button
           size='mini'
           icon='pin'
           circular={true}
           className={ [styles.pin, pinned && styles.pinned].join(' ') }
           onClick={ this.handlePin }
-        />
+        />*/}
 
         { app.type === 'local' && <Button
             size='mini'
