@@ -59,3 +59,9 @@
     margin-right: 2em;
   }
 }
+
+.layout {
+  padding: 2em;
+  background-color: white;
+  width: 100%;
+}

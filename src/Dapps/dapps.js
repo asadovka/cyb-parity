@@ -114,7 +114,7 @@ class Dapps extends Component {
     const { showDeployModal } = this.state;
 
     return (
-      <Page className={ styles.layout }>
+      <div className={ styles.layout }>
         {this.renderSection(this.store.pinnedApps)}
         {this.renderSection(this.store.visibleUnpinned)}
         {
@@ -171,7 +171,7 @@ class Dapps extends Component {
           </Modal>
         }
 
-      </Page>
+      </div>
     );
   }
 
