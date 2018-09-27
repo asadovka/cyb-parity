@@ -16,7 +16,14 @@ export const MenuItem = ({ children, to, icon, open = true, ...props }) => (
   <li className={styles.menuItem}>
     {to ?
       (
-        <Link to={to} activeClassName={styles.menuItemActive} className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')} {...props} >
+        <Link
+          to={to}
+          activeClassName={styles.menuItemActive}
+/*
+          className={styles['menuItem_'+ icon] + ' ' + (open ? styles.menuItemActiveOpen: '')}
+*/
+          className={styles['menuItem'] + ' ' + (open ? styles.menuItemActiveOpen: '')}
+          {...props} >
           {children}
         </Link>
       )

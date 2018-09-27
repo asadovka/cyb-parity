@@ -6,6 +6,7 @@ import {
   HamburgerMenu
 } from '../components/MenuAndLogo/MenuAndLogo';
 import builtinApps from '../Dapps/dappsBuiltin.json';
+import { getBuildPath } from '../util/host';
 
 class MenuAndLogo extends Component {
   state = {
@@ -39,20 +40,32 @@ class MenuAndLogo extends Component {
     const onMenuItemClick = () => {
       this.setState({
         menuOpen: false
-      })
-    }
+      });
+    };
+
+    const builtInAppsPath = getBuildPath();
+
+    //debugger;
+    const menuItems = builtinApps.map((app) => {
+
+      // todo: get icon url from manifest?
+      //const iconUrl = `file://${builtInAppsPath}/${app.id}/icon.png`;
+
+      return <MenuItem
+                onClick={ onMenuItemClick }
+                icon='explorer'
+                to={ `/${app.id}` }
+                key={ app.id }
+             >{app.name}</MenuItem>;
+    });
 
     return (
       <div>
-        <HamburgerMenu open={menuOpen} onClick={this.toggle}>
+{/*        <HamburgerMenu open={menuOpen} onClick={this.toggle}>
           <Menu open={true} >
-            {
-              builtinApps.map((app) => {
-                return <MenuItem onClick={ onMenuItemClick } icon='explorer' to={ `/${app.id}` } key={ app.id }>{app.name}</MenuItem>;
-              })
-            }
+            { menuItems }
           </Menu>
-        </HamburgerMenu>
+        </HamburgerMenu>*/}
         <Logo to='/'>logo</Logo>
       </div>
     );
