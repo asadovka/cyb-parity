@@ -5,7 +5,7 @@
   },
   "linux": {
     "category": "Utility",
-    "icon": "./assets/icon/small-white-512x512.png",
+    "icon": "./assets/icon/logo_cyb_512x512.png",
     "target": [
       "AppImage",
       "snap",
@@ -15,7 +15,7 @@
   },
   "mac": {
     "category": "public.app-category.productivity",
-    "icon": "./assets/icon/small-white-512x512.png",
+    "icon": "./assets/icon/logo_cyb_512x512.png",
     "target": [
       "dmg"
     ]
@@ -27,7 +27,7 @@
   },
   "productName": "Cyb",
   "win": {
-    "icon": "./assets/icon/small-white-512x512.png",
+    "icon": "./assets/icon/logo_cyb_512x512.png",
     "publisherName": "cybercongress",
     "target": "nsis"
   }
