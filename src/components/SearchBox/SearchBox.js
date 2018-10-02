@@ -13,7 +13,7 @@ export const SearchForm = ({ inputRef, ...props }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (props.onSubmit) props.onSubmit(input.value, null, input)
+    if (props.onSubmit) props.onSubmit(input.value, input)
   }
 
   return (

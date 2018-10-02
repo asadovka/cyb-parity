@@ -52,6 +52,18 @@ import IdBar from './IdBar';
 
 @observer
 class Application extends Component {
+  constructor(props, context) {
+    super(props, context);
+    const [app, query] = (window.location.hash || '').replace('#/', '').split('/');
+    // const app = 'sdf';
+    // const query = 'sdf';
+    this.state = {
+      app,
+      query
+    }
+  }
+
+
   static contextTypes = {
     api: PropTypes.object.isRequired,
     background: PropTypes.string
@@ -63,10 +75,33 @@ class Application extends Component {
     pending: PropTypes.array
   }
 
+  state = {
+    app: null,
+    query: ''
+  }
+
   hwstore = HardwareStore.get(this.context.api);
   upgradeStore = UpgradeStore.get(this.context.api);
 
+
+
+  search = (q, input) => {
+    const app = q.split('.')[1] || 'cyb';
+    const query = q.split('.')[0] || '';
+    console.log(app, query)
+    this.setState({
+      app,
+      query
+    });
+
+    this.props.router.push(app + '/' + query)
+    input.value = query;
+  }
+
+
   render () {
+    console.log('window.location.href ', window.location.href);
+
     const { blockNumber } = this.props;
     const [root] = (window.location.hash || '').replace('#/', '').split('/');
     const isMinimized = root !== '';
@@ -130,7 +165,11 @@ class Application extends Component {
               <MenuAndLogo />
             </PanelLeft>
             <SearchFormPanel>
-              <SearchBox />
+              <SearchBox
+                onSearch={this.search}
+                app={this.state.app}
+                inputText={this.state.query}
+              />
             </SearchFormPanel>
             <PanelRight>
               {
