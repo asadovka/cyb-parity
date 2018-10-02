@@ -95,7 +95,7 @@ class Application extends Component {
     });
 
     this.props.router.push(app + '/' + query)
-    input.value = query;
+    // input.value = query;
   }
 
 
@@ -168,7 +168,7 @@ class Application extends Component {
               <SearchBox
                 onSearch={this.search}
                 app={this.state.app}
-                inputText={this.state.query}
+                inputText={this.state.query + '.' + this.state.app  }
               />
             </SearchFormPanel>
             <PanelRight>

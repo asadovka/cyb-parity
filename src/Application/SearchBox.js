@@ -58,11 +58,12 @@ class SearchBox extends Component {
     return (
       <div>
             <div style={{ display: 'flex'}}>
-            {app && <AppPrefix>{app}</AppPrefix>}
+
             <SearchForm
               defaultValue={inputText}
               onSubmit={onSearch}
             />
+          {/*app && <AppPrefix>{app}</AppPrefix>*/}
             {/*</div>
                   <Legend>
                      Search in <strong>{nFormatter(transactionsCount, 1)}</strong>&nbsp; transactions in <strong>{blockchains}</strong>&nbsp;

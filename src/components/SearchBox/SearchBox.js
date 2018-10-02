@@ -27,7 +27,7 @@ export const SearchForm = ({ inputRef, ...props }) => {
           if (inputRef) inputRef(node);
         }}
       />
-      <span className={styles.inputIcone} onClick={onSubmit}/>
+      {/*<span className={styles.inputIcone} onClick={onSubmit}/>*/}
     </form>
   );
 }
