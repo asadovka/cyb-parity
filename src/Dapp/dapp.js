@@ -51,18 +51,18 @@ export default class Dapp extends Component {
   requestsStore = RequestsStore.get(this.context.api)
 
   componentWillMount () {
-    const { id } = this.props.params;
+    const { id, details } = this.props.params;
 
     if (!builtinDapps[id] || !builtinDapps[id].skipHistory) {
       this.historyStore.add(id);
     }
 
-    this.loadApp(id);
+    this.loadApp(id, details);
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.params.id !== this.props.params.id) {
-      this.loadApp(nextProps.params.id);
+    if (nextProps.params.id !== this.props.params.id || nextProps.params.details !== this.props.params.details) {
+      this.loadApp(nextProps.params.id, nextProps.params.details);
     }
   }
 
@@ -106,8 +106,24 @@ export default class Dapp extends Component {
     });
   };
 
-  loadApp (id) {
+  loadApp (id, details) {
     this.setState({ loading: true });
+
+    if (id == 'ipfs' || id == 'ipns') {
+      const { params } = this.props;
+      const hash = details;
+      const type = id;
+      this.setState({
+        loading: false,
+        app: {
+          localUrl: `http://localhost:8080/${type}/${hash}`
+        },
+        token: null
+      })
+      return;
+    }
+
+
 
     this.store
       .loadApp(id)
@@ -138,6 +154,8 @@ export default class Dapp extends Component {
       'preload.js'
     )}`;
 
+    console.log('[src, hash]', src, hash);
+
     // https://electronjs.org/docs/tutorial/security#3-enable-context-isolation-for-remote-content
     return <webview
       className={ styles.frame }
@@ -147,7 +165,7 @@ export default class Dapp extends Component {
       src={ `${src}${hash}` }
       partition={ `persist:${this.state.app.id}` }
       webpreferences='contextIsolation'
-           />;
+           />
   }
 
   render () {

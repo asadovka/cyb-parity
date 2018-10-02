@@ -13,7 +13,7 @@ export const SearchForm = ({ inputRef, ...props }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (props.onSubmit) props.onSubmit(input.value, null, input)
+    if (props.onSubmit) props.onSubmit(input.value, input)
   }
 
   return (
@@ -27,7 +27,7 @@ export const SearchForm = ({ inputRef, ...props }) => {
           if (inputRef) inputRef(node);
         }}
       />
-      <span className={styles.inputIcone} onClick={onSubmit}/>
+      {/*<span className={styles.inputIcone} onClick={onSubmit}/>*/}
     </form>
   );
 }
