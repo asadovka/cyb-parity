@@ -35,6 +35,7 @@ import Snackbar from '../Snackbar';
 import Status from '../Status';
 import UpgradeParity from '../UpgradeParity';
 import { Link } from 'react-router';
+import appStore from '../Dapps/store';
 
 import { appLogoDark as parityLogo } from '../config';
 import styles from './application.css';
@@ -65,6 +66,10 @@ class Application extends Component {
 
   hwstore = HardwareStore.get(this.context.api);
   upgradeStore = UpgradeStore.get(this.context.api);
+
+  componentWillMount () {
+    appStore.get(this.context.api).loadLocalApps();
+  }
 
   render () {
     const { blockNumber } = this.props;

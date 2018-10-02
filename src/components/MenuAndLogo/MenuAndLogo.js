@@ -36,15 +36,9 @@ class HamburgerMenu extends React.Component {
     const { open, onClick } = this.props;
 
     return (
-      <div className={styles.hamburgerMenu}>
-        <div onClick={onClick} className={cx(styles.switcher, {[styles.switcherOpen]: open })}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
+      <div onClick={onClick} className={styles.hamburgerMenu}>
         <div className={cx(styles.popover, {[styles.popoverOpen]: open })}>
-        {this.props.children}
+          { this.props.children }
         </div>
       </div>
     );
