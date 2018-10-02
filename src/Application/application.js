@@ -35,7 +35,7 @@ import Snackbar from '../Snackbar';
 import Status from '../Status';
 import UpgradeParity from '../UpgradeParity';
 import { Link } from 'react-router';
-import appStore from '../Dapps/store';
+import AppStore from '../Dapps/store';
 
 import { appLogoDark as parityLogo } from '../config';
 import styles from './application.css';
@@ -56,8 +56,6 @@ class Application extends Component {
   constructor(props, context) {
     super(props, context);
     const [app, query] = (window.location.hash || '').replace('#/', '').split('/');
-    // const app = 'sdf';
-    // const query = 'sdf';
     this.state = {
       app,
       query
@@ -77,31 +75,42 @@ class Application extends Component {
   }
 
   state = {
-    app: null,
+    app: '',
     query: ''
   }
 
   hwstore = HardwareStore.get(this.context.api);
   upgradeStore = UpgradeStore.get(this.context.api);
+  appStore = AppStore.get(this.context.api);
 
 
-
-  search = (q, input) => {
+  search = (q) => {
     const app = q.split('.')[1] || 'cyb';
     const query = q.split('.')[0] || '';
-    console.log(app, query)
     this.setState({
       app,
       query
     });
 
     this.props.router.push(app + '/' + query)
-    // input.value = query;
   }
 
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.location.pathname !== this.props.location.pathname) {
+      const app = nextProps.params.id || '';
+      const query = nextProps.params.details || '';
+      this.setState({
+        app,
+        query
+      });
+
+      this.searchInput.value = app ? (query + '.' + app) : '';
+    }
+  }
+
   componentWillMount () {
-    appStore.get(this.context.api).loadLocalApps();
+    this.appStore.loadLocalApps();
   }
 
   render () {
@@ -123,47 +132,8 @@ class Application extends Component {
       );
     }
 
-    // return (
-    //   <div className={ styles.application }>
-    //     <img src={ parityLogo } className={ styles.logo } />
-    //     {
-    //       blockNumber
-    //         ? <Status upgradeStore={ this.upgradeStore } />
-    //         : null
-    //     }
-    //     {
-    //       isMinimized
-    //         ? this.renderMinimized()
-    //         : this.renderApp()
-    //     }
-    //     <Connection />
-    //     <DappRequests />
-    //     {
-    //       (pinMatrixRequest.length > 0)
-    //         ? (
-    //           <PinMatrix
-    //             device={ pinMatrixRequest[0] }
-    //             store={ this.hwstore }
-    //           />
-    //         )
-    //         : null
-    //     }
-    //     <Requests />
-    //     <ParityBar
-    //       alwaysHidden
-    //       dapp={ isMinimized }
-    //     />
-    //   </div>
-    // );
-
     return (
       <AppContainer >
-        {/*<img src={ parityLogo } className={ styles.logo } />*/}
-        {/*
-          blockNumber
-            ? <Status upgradeStore={ this.upgradeStore } />
-            : null
-        */}
         <AppHeader open={isMinimized}>
           <Panel open={isMinimized}>
             <PanelLeft>
@@ -173,7 +143,9 @@ class Application extends Component {
               <SearchBox
                 onSearch={this.search}
                 app={this.state.app}
+                query={this.state.query}
                 inputText={this.state.query + '.' + this.state.app  }
+                inputRef={node => { this.searchInput = node; }}
               />
             </SearchFormPanel>
             <PanelRight>
@@ -241,11 +213,6 @@ class Application extends Component {
         {children}
       </AppContent>
     );
-    // return (
-    //   <div key='content' className={ styles.content }>
-    //     {children}
-    //   </div>
-    // );
   }
 }
 

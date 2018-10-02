@@ -52,7 +52,8 @@ class SearchBox extends Component {
     const {
       app,
       inputText,
-      onSearch
+      onSearch,
+      inputRef
     } = this.props;
 
     return (
@@ -62,6 +63,7 @@ class SearchBox extends Component {
             <SearchForm
               defaultValue={inputText}
               onSubmit={onSearch}
+              inputRef={inputRef}
             />
           {/*app && <AppPrefix>{app}</AppPrefix>*/}
             {/*</div>

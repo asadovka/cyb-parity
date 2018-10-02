@@ -87,7 +87,8 @@ function renderUI (token) {
           <Route path='/apps' component={ Dapps } />
           <Route path='/help' component={ Help } />
           <Route path='/:id' component={ Dapp } />
-          <Route path='/:id/:details' component={ Dapp } />
+          <Route path='/:id/:q' component={ Dapp } />
+          <Route path='/:id/:q/:details' component={ Dapp } />
           <IndexRoute component={ Home } />
         </Route>
       </Router>
