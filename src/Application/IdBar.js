@@ -12,6 +12,7 @@ import appStore from '../Dapps/store';
 import styles from './IdBar.css';
 import builtinApps from '../Dapps/dappsBuiltin.json';
 import BuiltinAppsList from '../BuiltinAppsList/builtinAppsList';
+import { getUrl } from '../util/navigation';
 
 const walletApp = builtinApps.find(app => app.name === 'Parity Wallet');
 
@@ -45,7 +46,7 @@ export default class IdBar extends Component {
 
         <BuiltinAppsList appStore={ store } />
         <SignerPending className={ styles.pending } />
-        <Wallet to={ `/${walletApp.id}` } />
+        <Wallet to={ getUrl('cyb', walletApp.id) } />
         <div className={ styles.defaultAccount }>
           <DefaultAccount accountStore={ accountStore } />
         </div>

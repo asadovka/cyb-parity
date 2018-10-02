@@ -55,7 +55,7 @@ import IdBar from './IdBar';
 class Application extends Component {
   constructor(props, context) {
     super(props, context);
-    const [app, query] = (window.location.hash || '').replace('#/', '').split('/');
+    const [query, app] = (window.location.hash || '').replace('#/', '').split('^');
     this.state = {
       app,
       query
@@ -85,21 +85,20 @@ class Application extends Component {
 
 
   search = (q) => {
-    const app = q.split('.')[1] || 'cyb';
     const query = q.split('.')[0] || '';
+    const app = q.split('.')[1] || 'cyb';
     this.setState({
       app,
       query
     });
 
-    this.props.router.push(app + '/' + query)
+    this.props.router.push(query ? (query + '^' + app) : app);
   }
-
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.location.pathname !== this.props.location.pathname) {
       const app = nextProps.params.id || '';
-      const query = nextProps.params.details || '';
+      const query = nextProps.params.q || '';
       this.setState({
         app,
         query
@@ -144,7 +143,7 @@ class Application extends Component {
                 onSearch={this.search}
                 app={this.state.app}
                 query={this.state.query}
-                inputText={this.state.query + '.' + this.state.app  }
+                inputText={ this.state.app ? (this.state.query + '.' + this.state.app) : '' }
                 inputRef={node => { this.searchInput = node; }}
               />
             </SearchFormPanel>

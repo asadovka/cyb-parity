@@ -7,6 +7,7 @@ import Popup from 'semantic-ui-react/dist/commonjs/modules/Popup';
 
 import styles from './builtinAppsList.css';
 import AppListItem from './AppListItem/appListItem';
+import {getUrl} from '../util/navigation';
 
 @observer
 class BuiltinAppsList extends Component {
@@ -34,7 +35,7 @@ class BuiltinAppsList extends Component {
       return <AppListItem
         onClick={ () => this.handleClose(app.id) }
         iconUrl={ app.image }
-        to={ app.id }
+        to={ getUrl('cyb', app.id) }
         key={ app.id }
       >{app.name}</AppListItem>;
     });

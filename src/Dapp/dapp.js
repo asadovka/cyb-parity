@@ -51,18 +51,18 @@ export default class Dapp extends Component {
   requestsStore = RequestsStore.get(this.context.api)
 
   componentWillMount () {
-    const { id, details } = this.props.params;
+    const { id, q, details } = this.props.params;
 
     if (!builtinDapps[id] || !builtinDapps[id].skipHistory) {
       this.historyStore.add(id);
     }
 
-    this.loadApp(id, details);
+    this.loadApp(id, q, details);
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.params.id !== this.props.params.id || nextProps.params.details !== this.props.params.details) {
-      this.loadApp(nextProps.params.id, nextProps.params.details);
+    if (nextProps.params.id !== this.props.params.id || nextProps.params.details !== this.props.params.details || nextProps.params.q !== this.props.params.q) {
+      this.loadApp(nextProps.params.id, nextProps.params.q, nextProps.params.details);
     }
   }
 
@@ -106,11 +106,11 @@ export default class Dapp extends Component {
     });
   };
 
-  loadApp (id, details) {
+  loadApp (id, query, details) {
     this.setState({ loading: true });
 
     if (id == 'ipfs' || id == 'ipns') {
-      const hash = details;
+      const hash = query;
       const type = id;
       this.setState({
         loading: false,
@@ -121,20 +121,18 @@ export default class Dapp extends Component {
       })
       return;
     }
-// debugger
-//     if (id === 'cyb') {
-//       this.store
-//         .loadApp(details)
-//         .then((app) => {
-//           this.setState({ loading: false, app, token: this.requestsStore.createToken(app.id) });
-//         })
-//         .catch(() => {
-//           this.setState({ loading: false });
-//         });
-//       return;
-//     }
 
-
+    if (id === 'cyb') {
+      this.store
+        .loadApp(query)
+        .then((app) => {
+          this.setState({ loading: false, app, token: this.requestsStore.createToken(app.id) });
+        })
+        .catch(() => {
+          this.setState({ loading: false });
+        });
+      return;
+    }
 
     this.store
       .loadApp(id)

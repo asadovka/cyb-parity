@@ -13,7 +13,7 @@ import {
 
 import builtinApps from '../../Dapps/dappsBuiltin.json';
 const chaingearApp = builtinApps.find(app => app.name === 'Chaingear');
-
+import {getUrl} from '../../util/navigation';
 
 class AppsPanel extends Component {
 
@@ -57,7 +57,7 @@ class AppsPanel extends Component {
             <Arrow />
           </Item>
 
-          <Item  to={`/${chaingearApp.id}/new`}>
+          <Item to={ getUrl('cyb', chaingearApp.id, 'new') }>
             <ItemTitle>Create Register</ItemTitle>
             <Image type='createRegistry'/>
             <Arrow />
