@@ -4,6 +4,22 @@
 ## Introduction
 ... Problematics
 
+Proplems of web2:
+
+Economic problems
+- Monopolization of traffic by tech companies(gates, servers)
+- Monopolization of resources by  tech companies(computing power, datacenters)
+
+Tech problems
+- No data ownership for users
+- No date privacy
+- No transparency in traffic or services
+- Speed
+- No data permanence (distributed copies)
+
+
+
+
 ## Web2: Where => what-how
 
 Instead of location based paradigm is based on content addressing paradigm. Key point is that we do not need to have knowledge of location such as domain name in order to link to an object
