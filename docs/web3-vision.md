@@ -7,8 +7,8 @@
 Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems: 
 
 1. Internet is still wery slow. Client - server architecture has a single point of failure and provides a long way to transfer data. Telecommunication equipment is utilized not effectively.
-2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use it without user's agreement.
-3. Monopolization of economy. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year theese shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
+2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use or compromise it without user's agreement. 
+3. Monopolization of market. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year theese shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
 4. No permanent data. Data in web2 paradigm is stateless and become unacsessable or lost during time. Old links with high probability leads to nowhere.
 
 This leads up to conclusion of what kind of characteristics the new Internet (web3) will have:
