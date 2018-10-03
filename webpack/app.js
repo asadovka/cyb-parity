@@ -205,7 +205,7 @@ module.exports = {
                   if (fs.existsSync(path.join(dir, 'distribution'))) {
                     return {
                       from: path.join(dir, 'distribution'),
-                      to: `dapps/${dapp.id}/`
+                      to: `dapps/${dapp.ext}/`
                     };
                   }
                   if (!fs.existsSync(path.join(dir, 'dist'))) {
@@ -213,7 +213,7 @@ module.exports = {
 
                     return {
                       from: path.join(dir),
-                      to: `dapps/${dapp.id}/`
+                      to: `dapps/${dapp.ext}/`
                     };
                   }
 
@@ -227,11 +227,11 @@ module.exports = {
                     .filter((from) => fs.existsSync(from))
                     .map((from) => ({
                       from,
-                      to: `dapps/${dapp.id}/`
+                      to: `dapps/${dapp.ext}/`
                     }))
                     .concat({
                       from: path.join(dir, 'dist'),
-                      to: `dapps/${dapp.id}/dist/`
+                      to: `dapps/${dapp.ext}/dist/`
                     });
                 })
                 .filter((copy) => copy)

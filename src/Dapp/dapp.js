@@ -109,6 +109,8 @@ export default class Dapp extends Component {
   loadApp (id, query, details) {
     this.setState({ loading: true });
 
+    debugger;
+
     if (id == 'ipfs' || id == 'ipns') {
       const hash = query;
       const type = id;
@@ -119,18 +121,6 @@ export default class Dapp extends Component {
         },
         token: null
       })
-      return;
-    }
-
-    if (id === 'cyb') {
-      this.store
-        .loadApp(query)
-        .then((app) => {
-          this.setState({ loading: false, app, token: this.requestsStore.createToken(app.id) });
-        })
-        .catch(() => {
-          this.setState({ loading: false });
-        });
       return;
     }
 

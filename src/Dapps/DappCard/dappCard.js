@@ -66,7 +66,7 @@ export default class DappCard extends Component {
         }
 
         <div className={ styles.content }>
-          <Link to={ app.url === 'web' ? '/web' : `/${app.id}` } >
+          <Link to={ app.url === 'web' ? '/web' : `/${app.ext}` } >
             <DappIcon
               app={ app }
               className={ styles.image }

@@ -161,11 +161,11 @@ export default class DappsStore extends EventEmitter {
    * Try to find the app from the local (local or builtin)
    * apps, else fetch from the node
    */
-  loadApp (id) {
+  loadApp (ext) {
     return this
       .loadLocalApps()
       .then(() => {
-        const app = this.apps.find((app) => app.id === id);
+        const app = this.apps.find((app) => app.ext === ext);
 
         if (app && ((app.type === 'local' || app.type === 'builtin') || !!app.contentHash)) {
           return app;
@@ -183,7 +183,7 @@ export default class DappsStore extends EventEmitter {
                   return downloadedApp;
                 })
                 .catch(e => {
-                  console.error(`Error loading dapp ${id}`, e);
+                  console.error(`Error loading dapp ${ext}`, e);
                 });
             });
       }
@@ -347,6 +347,7 @@ export default class DappsStore extends EventEmitter {
           // console.log( ' appDefinition ', appDefinition)
           return {
             author: author,
+            ext: appDefinition.name,
             description: description,
             id: '' + appDefinition.name,
             chaingearId: appDefinition.id,

@@ -57,7 +57,7 @@ class AppsPanel extends Component {
             <Arrow />
           </Item>
 
-          <Item to={ getUrl('cyb', chaingearApp.id, 'new') }>
+          <Item to={ `${chaingearApp.id}/new` }>
             <ItemTitle>Create Register</ItemTitle>
             <Image type='createRegistry'/>
             <Arrow />

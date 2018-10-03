@@ -95,7 +95,7 @@ export function fetchBuiltinApps () {
     .all(initialApps.map(app => {
       const manifestPath = path.join(
         builtinDappsPath,
-        app.id,
+        app.ext,
         'manifest.json'
       );
 
@@ -104,7 +104,7 @@ export function fetchBuiltinApps () {
           try {
             return JSON.parse(r);
           } catch (e) {
-            console.error(`Couldn't parse manifest.json for ${app.id}`, e);
+            console.error(`Couldn't parse manifest.json for ${app.ext}`, e);
             return {};
           }
         })
@@ -120,8 +120,8 @@ export function fetchBuiltinApps () {
           const iconUrl = manifests[index].iconUrl || 'icon.png';
 
           app.type = 'builtin';
-          app.localUrl = `file://${builtinDappsPath}/${app.id}/index.html`;
-          app.image = `file://${builtinDappsPath}/${app.id}/${iconUrl}`;
+          app.localUrl = `file://${builtinDappsPath}/${app.ext}/index.html`;
+          app.image = `file://${builtinDappsPath}/${app.ext}/${iconUrl}`;
 
           return app;
         });
@@ -164,6 +164,7 @@ export function fetchLocalApps () {
       dapps.map(({ filename, manifest: { id, localUrl, iconUrl, ...rest } }) => (
         {
           ...rest,
+          ext: filename,
           type: 'local',
           // Prevent using the appId of an existing non-local dapp with already approved permissions
           id: `LOCAL-${id}`,

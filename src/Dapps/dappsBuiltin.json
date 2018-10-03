@@ -1,6 +1,7 @@
 [
   {
     "id": "v1",
+    "ext": "wallet",
     "name": "Parity Wallet",
     "package": "@cybercongress/dapp-wallet",
     "description": "Parity Wallet and Account management tools",
@@ -10,6 +11,7 @@
   },
   {
     "id": "0x889d3403834b4ef359448575dcd6d77334330edaecc66a77051483f3a498ab6e",
+    "ext": "permissions",
     "src": "DappMethods",
     "name": "Dapp Method Permissions",
     "package": "@parity/dapp-dapp-methods",
@@ -20,6 +22,7 @@
   },
   {
     "id": "0xcd423760c9650eb549b1615f6cf96d420e32aadcea2ff5fe11c26457244adcc1",
+    "ext": "status",
     "src": "Status",
     "name": "Node Status",
     "package": "@parity/dapp-status",
@@ -30,6 +33,7 @@
   },
   {
     "id": "0x89682fd2c0ffa4ff53a8dc2c5f6a65c6e31de8f659fa2935a07a678e711a58a3",
+    "ext": "contracts",
     "src": "Develop",
     "name": "Develop Contracts",
     "package": "@parity/dapp-develop",
@@ -40,6 +44,7 @@
   },
   {
     "id": "chaingear",
+    "ext": "chaingear",
     "name": "Chaingear",
     "package": "@cybercongress/chaingear",
     "description": "The most expensive database",

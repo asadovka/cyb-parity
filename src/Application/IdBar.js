@@ -46,7 +46,7 @@ export default class IdBar extends Component {
 
         <BuiltinAppsList appStore={ store } />
         <SignerPending className={ styles.pending } />
-        <Wallet to={ getUrl('cyb', walletApp.id) } />
+        <Wallet to={ `${walletApp.ext}` } />
         <div className={ styles.defaultAccount }>
           <DefaultAccount accountStore={ accountStore } />
         </div>

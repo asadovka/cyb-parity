@@ -16,8 +16,7 @@ class BuiltinAppsList extends Component {
   };
 
   static propTypes = {
-    appStore: PropTypes.object.isRequired,
-    router: PropTypes.object.isRequired
+    appStore: PropTypes.object.isRequired
   };
 
   handleOpen = () => {
@@ -31,11 +30,13 @@ class BuiltinAppsList extends Component {
   render () {
     const builtinApps = this.props.appStore.sortedBuiltin;
 
-    const items = builtinApps.map((app) => {
+    const items = builtinApps
+      .filter(app => app.ext !== 'wallet')
+      .map((app) => {
       return <AppListItem
         onClick={ () => this.handleClose(app.id) }
         iconUrl={ app.image }
-        to={ getUrl('cyb', app.id) }
+        to={ `${app.ext}` }
         key={ app.id }
       >{app.name}</AppListItem>;
     });
