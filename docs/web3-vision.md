@@ -2,20 +2,25 @@
 @xhipster @asadovka
 
 ## Introduction
-... Problematics
+... Problematics 
 
-Proplems of web2:
+Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems: 
 
-Economic problems
-- Monopolization of traffic by tech companies(gates, servers)
-- Monopolization of resources by  tech companies(computing power, datacenters)
+1. Internet is still wery slow. Client - server architecture has a single point of failure and provides a long way to transfer data. Telecommunication equipment is utilized not effectively.
+2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use it without user's agreement.
+3. Monopolization of economy. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year theese shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
+4. No permanent data. Data in web2 paradigm is stateless and become unacsessable or lost during time. Old links with high probability leads to nowhere.
 
-Tech problems
-- No data ownership for users
-- No date privacy
-- No transparency in traffic or services
-- Speed
-- No data permanence (distributed copies)
+This leads up to conclusion of what kind of characteristics the new Internet (web3) will have:
+
+1. Fast data transfer
+2. Global connection
+3. Secure
+4. Private/Anonymous
+5. Permanent state
+6. Ability to work offline
+7. Real-time connection update
+8. Economy
 
 
 
@@ -138,6 +143,9 @@ ERC 190 Package manager
 https://github.com/ethpm/ethpm-spec/blob/v1.0.0/release-lockfile.spec.md
 
 https://github.com/ethereum/EIPs/issues/190
+
+
+http://gavwood.com/web3lt.html
 
 ## On censorship resistance
     - writing data (medium, EOS)
