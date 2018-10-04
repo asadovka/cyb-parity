@@ -51,5 +51,25 @@
     "author": "Cybercongress",
     "version": "0.1.0",
     "visible": true
+  },
+  {
+    "id": "cyber",
+    "ext": "cyber",
+    "name": "cyber•Search",
+    "package": "@cybercongress/dapp-cyber",
+    "description": "Dapp for decentralized search",
+    "author": "Cybercongress",
+    "version": "0.0.1",
+    "visible": true
+  },
+  {
+    "id": "help",
+    "ext": "help",
+    "name": "Help",
+    "package": "@cybercongress/dapp-help",
+    "description": "Help app for cyb",
+    "author": "Cybercongress",
+    "version": "0.0.2",
+    "visible": true
   }
 ]

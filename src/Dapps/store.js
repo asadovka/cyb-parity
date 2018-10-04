@@ -47,8 +47,8 @@ const fsReadFile = util.promisify(fs.readFile);
 
 const entryCoreAbi = require('./entryCoreAbi.json');
 const registryAbi = require('./entryBaseAbi.json');
-const entryCoreContractAddr = '0xbbe0efe6ac55f5b1f7a8d83611f3fcd11258f1cb';
-const registryContractAddr = '0x57f231060fcbaa17b31c2438ef72cd50ce1940ba';
+const entryCoreContractAddr = '0x5EaE6DEd1E729Bf1DB16cbc66Bd241D77B82639B';
+const registryContractAddr = '0xECf9d973D7F715fE920Fa13F7be52c8DEFE0e0Bf';
 
 export default class DappsStore extends EventEmitter {
   @observable apps = [];

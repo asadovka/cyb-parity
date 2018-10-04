@@ -55,10 +55,16 @@ import IdBar from './IdBar';
 class Application extends Component {
   constructor(props, context) {
     super(props, context);
-    const [query, app] = (window.location.hash || '').replace('#/', '').split('^');
+
+    //const [query, app] = (window.location.hash || '').replace('#/', '').split('^');
+    const query = props.params.q || '';
+    const app = props.params.id;
+    const details = props.params.details || '';
+
     this.state = {
       app,
-      query
+      query,
+      details
     }
   }
 
@@ -83,10 +89,13 @@ class Application extends Component {
   upgradeStore = UpgradeStore.get(this.context.api);
   appStore = AppStore.get(this.context.api);
 
-
   search = (q) => {
+    if (!q) {
+      return;
+    }
+
     const query = q.split('.')[0] || '';
-    const app = q.split('.')[1] || 'cyb';
+    const app = q.split('.')[1] || 'cyber';
     this.setState({
       app,
       query
@@ -99,17 +108,22 @@ class Application extends Component {
     if (nextProps.location.pathname !== this.props.location.pathname) {
       const app = nextProps.params.id || '';
       const query = nextProps.params.q || '';
-      this.setState({
+      const details = nextProps.params.details;
+/*      this.setState({
         app,
         query
-      });
+      });*/
 
-      this.searchInput.value = app ? (query + '.' + app) : '';
+      this.searchInput.value = this.getInputText(app, query, details);
     }
   }
 
   componentWillMount () {
     this.appStore.loadLocalApps();
+  }
+
+  getInputText = (app, query, details) => {
+    return (app ? (query + '.' + app) : '') + (details ? '/' + details : '');
   }
 
   render () {
@@ -119,6 +133,7 @@ class Application extends Component {
     const [root] = (window.location.hash || '').replace('#/', '').split('/');
     const isMinimized = root !== '';
     const { pinMatrixRequest } = this.hwstore;
+    const { app, query, details } = this.state;
 
     if (inFrame) {
       return (
@@ -143,7 +158,7 @@ class Application extends Component {
                 onSearch={this.search}
                 app={this.state.app}
                 query={this.state.query}
-                inputText={ this.state.app ? (this.state.query + '.' + this.state.app) : '' }
+                inputText={ this.getInputText(app, query, details) }
                 inputRef={node => { this.searchInput = node; }}
               />
             </SearchFormPanel>

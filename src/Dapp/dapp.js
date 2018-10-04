@@ -43,7 +43,8 @@ export default class Dapp extends Component {
   state = {
     app: null,
     loading: true,
-    token: null
+    token: null,
+    query: ''
   };
 
   store = DappsStore.get(this.context.api);
@@ -104,12 +105,34 @@ export default class Dapp extends Component {
         source: event.target
       });
     });
+
+    webview.addEventListener('will-navigate', event => {
+      if (event.url.indexOf('cyb://') !== -1) {
+        event.preventDefault();
+        const appName = event.url.split('cyb://')[1].replace('.', '^');
+
+        this.props.router.push(appName);
+      }
+    });
+
+    webview.addEventListener('did-navigate-in-page', event => {
+
+/*      debugger;
+
+        console.log('did-navigate ->' + event.url);
+        event.preventDefault();
+        const details = event.url.split('#/')[1];
+
+        this.props.router.push((this.props.params.query || '') + '^' + this.props.params.id + '/' + details);*/
+    });
+
   };
 
   loadApp (id, query, details) {
-    this.setState({ loading: true });
-
-    debugger;
+    this.setState({
+      loading: true,
+      query: query || ''
+    });
 
     if (id == 'ipfs' || id == 'ipns') {
       const hash = query;
@@ -169,7 +192,7 @@ export default class Dapp extends Component {
 
   render () {
     const { params } = this.props;
-    const { app, loading, token } = this.state;
+    const { app, loading, token, query } = this.state;
 
     if (loading) {
       return (
@@ -197,7 +220,7 @@ export default class Dapp extends Component {
       );
     }
 
-    let src = `${app.localUrl}?shellAppId=${app.id}&shellToken=${token}`;
+    let src = `${app.localUrl}?shellAppId=${app.id}&shellToken=${token}&query=${query}`;
 
     let hash = '';
 

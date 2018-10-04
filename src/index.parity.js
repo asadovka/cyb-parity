@@ -85,7 +85,9 @@ function renderUI (token) {
         <Route path='/' component={ Application }>
           <Redirect from='/auth' to='/' />
           <Route path='/apps' component={ Dapps } />
+{/*
           <Route path='/help' component={ Help } />
+*/}
           <Route path='/:q^:id/:details' component={ Dapp } />
           <Route path='/:id/:details' component={ Dapp } />
           <Route path='/:q^:id' component={ Dapp } />

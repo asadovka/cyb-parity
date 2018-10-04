@@ -62,7 +62,7 @@ class AppsPanel extends Component {
             <Image type='createRegistry'/>
             <Arrow />
           </Item>
-          <Item to='/help'>
+          <Item to='/help/create'>
             <ItemTitle>Create App</ItemTitle>
             <Image type='createApp'/>
             <Arrow />
