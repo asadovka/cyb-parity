@@ -1,6 +1,6 @@
 {
   "name": "cyb",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "The Electron app for Parity UI",
   "main": ".build/electron.js",
   "jsnext:main": ".build/electron.js",
@@ -54,7 +54,7 @@
     "test:coverage": "cross-env NODE_ENV=test istanbul cover _mocha -- 'src/**/*.spec.js'"
   },
   "devDependencies": {
-    "@cybercongress/chaingear": "0.1.4",
+    "@cybercongress/chaingear": "0.2.4",
     "@cybercongress/dapp-cyber": "0.0.4",
     "@cybercongress/dapp-help": "0.0.2",
     "@cybercongress/dapp-wallet": "0.0.2",

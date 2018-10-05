@@ -26,13 +26,13 @@ export const PanelRight = ({ open, ...props }) => (
 );
 
 export const AppContainer = ({ children }) => (
-	<div style={{ background: '#eff3f6', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+	<div style={{ background: '#eff3f6', display: 'flex', flexDirection: 'column', minHeight: '55px' }}>
 		{children}
 	</div>
 )
 
 export const AppHeader = ({ open, children }) => (
-	<div style={{  left: 0, right: 0, minHeight: (!open) ? 550 : 109 }}>
+	<div style={{  left: 0, right: 0, minHeight: (!open) ? 550 : 55 }}>
 		{ children }
 	</div>
 )

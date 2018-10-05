@@ -47,8 +47,8 @@ const fsReadFile = util.promisify(fs.readFile);
 
 const entryCoreAbi = require('./entryCoreAbi.json');
 const registryAbi = require('./entryBaseAbi.json');
-const entryCoreContractAddr = '0x5EaE6DEd1E729Bf1DB16cbc66Bd241D77B82639B';
-const registryContractAddr = '0xECf9d973D7F715fE920Fa13F7be52c8DEFE0e0Bf';
+const entryCoreContractAddr = '0xa9A232ea75352aBd02113dd1a58b826ed9a8Bd13';
+const registryContractAddr = '0xf43be9f2ecdc5a375d6bc4af2ddcf1dcf33c3ff8';
 
 export default class DappsStore extends EventEmitter {
   @observable apps = [];
@@ -302,8 +302,10 @@ export default class DappsStore extends EventEmitter {
     return new Promise(resolve => {
       const applications = this._api.newContract(entryCoreAbi, entryCoreContractAddr);
 
-      applications.instance.entriesAmount.call().then(d => {
-        const ids = range(0, d.toNumber());
+      applications.instance.getEntriesIDs.call().then(rawIds => {
+        const ids = rawIds.map(rawId =>
+          rawId.value.toNumber()
+        );
 
         resolve(ids);
       });
@@ -314,12 +316,13 @@ export default class DappsStore extends EventEmitter {
     return new Promise(resolve => {
       const applications = this._api.newContract(entryCoreAbi, entryCoreContractAddr);
 
-      applications.instance.entryInfo.call({}, [id]).then(arr => {
+      applications.instance.readEntry.call({}, [id]).then(arr => {
         const obj = {
           name: arr[0],
-          iconUrl: arr[1],
-          contentUrl: arr[2],
-          manifestUrl: arr[3],
+          ext: arr[1],
+          manifestUrl: arr[2],
+          contentUrl: arr[3],
+          iconUrl: arr[4],
           id
         };
         // console.log(' >> ', obj);
