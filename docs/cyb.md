@@ -1,94 +1,183 @@
-# Cyb: web3 browser
+# A vision for web3
+@xhipster @asadovka
 
-# Overview
-
-Cyb is a blockchain browser with integrated DApp platform. Browser consists of two main parts:
-
-1. Core, which alows:
-
-- search inside blockchains, Dapps and IPFS content
-- deploy and manage Dapps for users
-- manage user's account data (wallet - sign transactions, create custom feed)
-- manage connection to cybernode
-
-2. DApps, which:
-
-- can be locally developed and ran in Cyb
-- can be obtained via hash through Chaingear
-- can be accessed with Cyb distributive (core apps)
-- use cyybernode for data obtaining
-- are stored in IPFS
-- can interact with user and each other
+- Properties
+- Components (, , , )
+-- content addressing
+-- digital signatures
+-- consensus computing
+- Browsing
 
 
-# Principles
+## Introduction
+... Problematics
+Originally an idea of web3 was inspired by Gavin Wood http://gavwood.com/web3lt.html
 
-There are several key principles of cyb behavior, design and development.
+- Fast
+- Global
+- Secure.
+- Private.
+- Permanent. Another implication of permanent we
+- Offline.
+- Mesh ready. Current internet paradigm is based on 1 internet provider paradigm. That is basicaly a bad shit, because in general even if you have 2 or more internet connection like wifi and lte your device and/or operation system don't allow you to get the full possibilities of connectivity enforcing you to use only one connection at a time. Another major bad shit in current internet architecture is that your device is treated as leech by default. Every device keeps data necessary to being useful for surround devices. Huge portion of our network traffic goes not from origin server but from isp cache. That means that changing a paradigm we can get ...
 
+## Digital signatures
 
-## 1. Users
-
-We focus on developers and advanced blockchain users (Metamask users). But cyb is also friendly for everyone who wants to interact with consensus computers.
-
-### 1.1. User activity types
-
-We respect user's attitude and principles. So we offer 3 clear custom types of user behavior:
-
-- public activity [address + events tracking]
-- private activity [abstract ID + events tracking ]
-- anonymous activity [no tracking at all]
-
-For successful browser development we need to collect at least public and private data. Thus users of these 2 groups well be incentivized by giving nice perks.
-
-### 1.2 User activity incentivization
-
-We use full tokenization of processes (data obtain and transfer, content generation and adding).
-
-### 1.3 Contribution
-
-### 1.4 Donation mechanism
-
-### 1.5 Feeedback and bug collection
-
-We use user's feedback to make products better. So we provide options for bug reporting and feedback leaving on every page.
+Saying that any particular blockchain or even all blockchains altogether is web3 is like saying that databases is world wide web. Yes databases technology contributed to a development of www, but without several protocols this databases would not become interconnected through billions of web sites. That is, in order to implement a vision of full web3 potential we need to find drop-in replacement for IP, TCP, HTTP and DNS. None of currently deployed blockchain technologies don't have necessary properties to directly replace dinosaurs. I would say that distributed ledger technology
 
 
-## 2. Design
+https://multicoin.capital/2018/07/10/the-web3-stack/
 
-Cyb design process follows Web3 design principles
+https://blockchainhub.net/web3-decentralized-web/
 
-### 2.1. State rules
+https://avc.com/2018/07/the-web-3-stack/
 
-We use simple colored states for states of transactions or operations:
-
-- mempool/failed - red
-- confirmed/reverted - yellow
-- finalized/succesful - green
-
-### 2.2 Data visualisation
-
-Data should be visualised in a simple and attractive way. No overloaded plots an diagrams, we use animation instead.
-
-### 2.3 Blockchain objects presenting
-
-Blockchain data is too complicated and sometimes not obvious for people. Thus we use adaptive tricks to make work process more convenient:
-
-1. Logical grouping for objects. Every app page has common groups of data (general, blockchain specific) for inheritance of views and better navigation or data observing.
-2. Classical accounting terms used for balance and cashflow operations. Blockahains use econimic principles for interaction between subjects thus we can describe such processes in established terms.
-3. Robohash logo for contracts entities. Contracts can act by themself, have and algorithms, so it's more natural to perceive them like robots instead of pieces of code.
+https://blog.stephantual.com/web-3-0-revisited-part-one-across-chains-and-across-protocols-4282b01054c5
 
 
-## 3. Development
 
-## 3.1 Core development
 
-## 3.2 DApps development
+# A vision for web3
+@xhipster @asadovka
 
-## 3.3 DApps deployment
+## Introduction
+... Problematics
 
-## 3.4 DApps interaction
+Proplems of web2:
 
-## 4. Cybernode
+Economic problems
+- Monopolization of traffic by tech companies(gates, servers)
+- Monopolization of resources by  tech companies(computing power, datacenters)
 
-### 4.1 Cybernode connection
+Tech problems
+- No data ownership for users
+- No date privacy
+- No transparency in traffic or services
+- Speed
+- No data permanence (distributed copies)
 
+
+
+
+## Web2: Where => what-how
+
+Instead of location based paradigm is based on content addressing paradigm. Key point is that we do not need to have knowledge of location such as domain name in order to link to an object
+
+## Web3: What => How
+
+Register with simple map between input and hash of an app. If no input return self
+
+Keyword:
+- . is the thing
+
+Examples:
+- cybernode.ai
+- 689jfcnffk8trcvhhjnjhgv.ethtx
+- cybernode.eth
+
+New approach for paths in web3:
+- local file paths ~~versus~~ are global paths. Merge filesystem paths and internet paths
+- thinking how to get resource, not where. file extensions and 1 level tlds are the same things
+- right segment explains how to parse left segment. Maps in chaingear.
+
+## DURA
+
+Distributed Unified Resource Address
+
+[local-handler]://[content-address].[root-registry-name]//[app-navigation]
+
+## Local handler
+cyb:// - is local handler that every os can handle. Being fully optional it can be very important in the very begining of web3
+The most important part in this expression is the dot
+
+## Content address
+```
+cyb://QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa.ipfs//files/explorer
+```
+
+## Root registry
+
+Current state of DNS root management is outdated. The most bad thing is that we still must to trust the most important things in our lives to strange organizations such as ICANN, IANA
+
+...Our proposal is that different browser software can choose
+
+We can ask ourselves why after 40 years of ubiquitous computer moment we are still don't have simple common knowledge about what file extensions must be used with what software?
+
+Our proposal is a concept of a root register. Structure of root register is a simple map between short name and ipfs hash of a program that is being triggered:
+
+```
+com:QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa google.com
+io:QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa
+exe:QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa
+pdf:QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa
+```
+A name must be letter, number or hypen
+
+
+Purpose of root register is to reach some very basic os and network agnostic agreement about what extensions with what programs must be used. Of corse the problem with such registry is that it must be somehow and somewhere maintained.
+
+## Three rules of root registry
+1. Software vendors must compete for a better root registry
+2. Software vendors must add setting with a change of a root registry
+3. Users of browsers and operation systems must have ability to overwrite maps
+
+On of the implementation is a [cyb](QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa.md) root registry
+
+## App navigation
+
+## Extensions
+
+A lot of cool stuff can be implemented using extensions. Extension is any symbol that adds predictable an logical behavior for parsing and rendering of requests.
+
+Examples:
+- local paths
+- connection links
+- CID stuff
+- URL parameters
+
+Key principle is that semantics is programmable and can be delivered from distributed network
+
+## Where extension
+
+Keyword:
+- under / left part is local path
+
+Examples:
+/https/cybernode.ai
+/ethereum/cybersearch.et
+
+Need to extend global paths to local paths
+
+- under right is state
+
+# Link extension
+
+Keyword:
+- at @
+
+Keyword:
+
+Examples:
+xhipster.eth@cybetfund.ai
+
+Need to find link between two entries
+
+:// Expression which allow address something for independent app
+
+## Reference
+
+https://tools.ietf.org/search/rfc6454
+http://127.0.0.1:8080/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf
+Not good
+
+https://github.com/bitcoin/bips/blob/master/bip-0122.mediawiki
+
+ERC 190 Package manager
+
+https://github.com/ethpm/ethpm-spec/blob/v1.0.0/release-lockfile.spec.md
+
+https://github.com/ethereum/EIPs/issues/190
+
+## On censorship resistance
+    - writing data (medium, EOS)
+    - reading data (gitcoin)
