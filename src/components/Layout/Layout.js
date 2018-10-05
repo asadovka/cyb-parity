@@ -26,7 +26,7 @@ export const PanelRight = ({ open, ...props }) => (
 );
 
 export const AppContainer = ({ children }) => (
-	<div style={{ background: '#eff3f6', display: 'flex', flexDirection: 'column', minHeight: '55px' }}>
+	<div style={{ background: '#eff3f6', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 		{children}
 	</div>
 )
