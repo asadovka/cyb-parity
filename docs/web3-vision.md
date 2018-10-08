@@ -13,6 +13,27 @@
 
 ## Introduction
 ... Problematics
+
+
+
+Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems:
+
+1. Internet is still wery slow. Client - server architecture has a single point of failure and provides a long way to transfer data. Telecommunication equipment is utilized not effectively.
+2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use or compromise it without user's agreement.
+3. Web2 paradigm causes monopolization of market. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year these shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
+4. No permanent data. Data in web2 paradigm is stateless and become inaccessible or lost during time. Old links with high probability leads to nowhere.
+
+This leads up to conclusion of what kind of characteristics the new Internet (web3) will have:
+
+1. Fast data transfer
+2. Global connection
+3. Secure
+4. Private/Anonymous
+5. Permanent state
+6. Ability to work offline
+7. Real-time connection update
+8. Economy
+
 Originally an idea of web3 was inspired by Gavin Wood http://gavwood.com/web3lt.html
 
 - Fast
@@ -37,30 +58,6 @@ https://avc.com/2018/07/the-web-3-stack/
 https://blog.stephantual.com/web-3-0-revisited-part-one-across-chains-and-across-protocols-4282b01054c5
 
 
-
-
-
-
-## Introduction
-... Problematics
-
-Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems:
-
-1. Internet is still wery slow. Client - server architecture has a single point of failure and provides a long way to transfer data. Telecommunication equipment is utilized not effectively.
-2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use or compromise it without user's agreement.
-3. Web2 paradigm causes monopolization of market. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year theese shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
-4. No permanent data. Data in web2 paradigm is stateless and become unacsessable or lost during time. Old links with high probability leads to nowhere.
-
-This leads up to conclusion of what kind of characteristics the new Internet (web3) will have:
-
-1. Fast data transfer
-2. Global connection
-3. Secure
-4. Private/Anonymous
-5. Permanent state
-6. Ability to work offline
-7. Real-time connection update
-8. Economy
 
 
 
