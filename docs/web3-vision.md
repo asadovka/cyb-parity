@@ -1,13 +1,53 @@
 # A vision for web3
 @xhipster @asadovka
 
-## Introduction
-... Problematics 
 
-Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems: 
+
+- Properties
+- Components (, , , )
+-- content addressing
+-- digital signatures
+-- consensus computing
+- Browsing
+
+
+## Introduction
+... Problematics
+Originally an idea of web3 was inspired by Gavin Wood http://gavwood.com/web3lt.html
+
+- Fast
+- Global
+- Secure.
+- Private.
+- Permanent. Another implication of permanent we
+- Offline.
+- Mesh ready. Current internet paradigm is based on 1 internet provider paradigm. That is basicaly a bad shit, because in general even if you have 2 or more internet connection like wifi and lte your device and/or operation system don't allow you to get the full possibilities of connectivity enforcing you to use only one connection at a time. Another major bad shit in current internet architecture is that your device is treated as leech by default. Every device keeps data necessary to being useful for surround devices. Huge portion of our network traffic goes not from origin server but from isp cache. That means that changing a paradigm we can get ...
+
+## Digital signatures
+
+Saying that any particular blockchain or even all blockchains altogether is web3 is like saying that databases is world wide web. Yes databases technology contributed to a development of www, but without several protocols this databases would not become interconnected through billions of web sites. That is, in order to implement a vision of full web3 potential we need to find drop-in replacement for IP, TCP, HTTP and DNS. None of currently deployed blockchain technologies don't have necessary properties to directly replace dinosaurs. I would say that distributed ledger technology
+
+
+https://multicoin.capital/2018/07/10/the-web3-stack/
+
+https://blockchainhub.net/web3-decentralized-web/
+
+https://avc.com/2018/07/the-web-3-stack/
+
+https://blog.stephantual.com/web-3-0-revisited-part-one-across-chains-and-across-protocols-4282b01054c5
+
+
+
+
+
+
+## Introduction
+... Problematics
+
+Currently the Internet is in crisis. Prevailing web2 paradigm causes technical, economic and social problems:
 
 1. Internet is still wery slow. Client - server architecture has a single point of failure and provides a long way to transfer data. Telecommunication equipment is utilized not effectively.
-2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use or compromise it without user's agreement. 
+2. There is no way for users to own, control and transfer data securely. Big Internet providers can fully track user's activity and use or compromise it without user's agreement.
 3. Web2 paradigm causes monopolization of market. Big tech companies and internet providers have significant share in computing powers, human capital and money capital. Every year theese shares become bigger and bigger which gives no chance for alternative solutions to compete on the market.
 4. No permanent data. Data in web2 paradigm is stateless and become unacsessable or lost during time. Old links with high probability leads to nowhere.
 
