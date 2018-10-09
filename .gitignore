@@ -12,3 +12,4 @@ test/tmp
 .npmjs
 .eslintcache
 .DS_Store
+.idea

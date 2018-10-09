@@ -20,7 +20,7 @@ import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 
 import Button from '@parity/ui/lib/Button';
 import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon';
-import messages from '@parity/dapp-dapp-methods/messages';
+import messages from '@cybercongress/dapp-method-permissions/messages';
 import Popup from 'semantic-ui-react/dist/commonjs/modules/Popup';
 
 import methodGroups from '../../methodGroups';
