@@ -107,9 +107,4 @@ Stay tuned with our [Changelog](./CHANGELOG.md) and [Roadmap](https://github.com
 If you're interested in using or developing CYB, come [join us on Telegram](https://t.me/fuckgoogle)
 
 
-test_pgp
-test local pgp_345
-tgit config --global commit.gpgsign true
-lol
 
-lol223r   ewrg
