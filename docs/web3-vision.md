@@ -1,7 +1,18 @@
 # A vision for web3
 @xhipster @asadovka
 
-
+principles
+main page
+navigation bar (back, DURI, forward)
+state bar (connectivity, web3 providers, sync state)
+id bar (choose account or id provider) + keystorage
+signer () and tx queue ()
+dapp bar (telegram or status like behavior)
+root registry
+computation limitation (docker)
+permissions
+core apps
+notifications
 
 - Properties
 - Components (, , , )
