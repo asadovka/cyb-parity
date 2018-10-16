@@ -1,25 +1,16 @@
 # A vision for web3
 @xhipster @asadovka
 
-principles
-main page
-navigation bar (back, DURI, forward)
-state bar (connectivity, web3 providers, sync state)
-id bar (choose account or id provider) + keystorage
-signer () and tx queue ()
-dapp bar (telegram or status like behavior)
-root registry
-computation limitation (docker)
-permissions
-core apps
-notifications
+Contents:
 
-- Properties
-- Components (, , , )
--- content addressing
--- digital signatures
--- consensus computing
-- Browsing
+1. Introduction
+2. Web2 paradigm
+3. Web3 paradigm
+4. Distributed Unified Resource Addresser 
+5. Root Registry
+6. Navigation
+7. Extensions
+8. References
 
 
 ## Introduction
