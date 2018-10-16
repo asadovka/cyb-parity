@@ -4,17 +4,12 @@
 2. Design & UX
 3. Development
 
-## Contribution
+# 1. Principles
 
-As an open source project we are welcome for contributions.
+We adhere to such key principles of cyb behavior, design and development.
 
-## Donation mechanism
 
-We have our vision of how to develop browser and what kind of fetures develop first. But we give an opportynity for community to decide and vote with tokens what kind of browser we need to see in near future.
 
-## Feeedback and bug collection
-
-We use user's feedback to make products better. So we provide options for bug reporting and feedback leaving on every page.
 
 ## Design
 
