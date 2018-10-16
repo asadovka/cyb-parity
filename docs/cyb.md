@@ -14,7 +14,7 @@
 10. Computation limitation (docker)
 11. Permissions
 12. Core apps
-13. otifications
+13. Notifications
 
 # 0. Overview
 
@@ -44,7 +44,7 @@ We focus on developers and advanced blockchain and IPFS users. But cyb is also f
 
 ## Anonimity
 
-We respect user's attitudes and principles. So we offer 3 clear custom types of activity tracking. 
+We respect user's attitudes and principles. So we offer 3 clear custom types of activity tracking.
 
 - public activity [user account address + events tracking]
 - private activity [abstract ID + events tracking ]
@@ -53,14 +53,28 @@ We respect user's attitudes and principles. So we offer 3 clear custom types of 
 By default all activity is anonymous. But for successful browser development we need to collect at least public and private data. Thus users of these 2 groups well be incentivized with tokens.
 
 
+# Main Page
 
+Main page of the browser consists of three main parts:
 
-## 3. Development
+- search bar, that provides all search functions
+- "most use" tabs, which are based on popular account activity and are unique for every account
+- links of Congress' products, which are useful to contributors
 
-## 3.1 Shell development
+# Navigation bar
 
-## 3.2 DApps development
+In web3 all data has a definite state, so it become easier to navigate through it and make UX better.  
 
-## 3.3 DApps deployment
+Navigation bar in Cyb is based on such elements as:
 
-## 3.4 DApps interaction
+- back button - returns user to the previous state of web3 agent
+- DURA section - provides easy access to certain state of web3 agent
+- forward button - brings user to the future state
+
+As a knowledge graph, (cyberd)[cyberd doc] can analyze user's activity and make predictions of user behavior. Thus we can implement the "forward" button.
+
+# Stat bar
+
+To be sure that you are working with actual state browser needs to manage connection to web3 providers.
+
+Currently we use Ethereum, IPFS, and Cyber nodes. Browser can show sync state with that nodes, display connection state (local, remote, no connection) and give an ability for user to chose own web3 provider.

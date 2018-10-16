@@ -6,11 +6,11 @@
 
 ## Contribution
 
-As an open source project we are welcome for contributions. 
+As an open source project we are welcome for contributions.
 
 ## Donation mechanism
 
-We have our vision of how to develop browser and what kind of fetures develop first. But we give an opportynity for community to decide and vote with tokens what kind of browser we need to see in near future. 
+We have our vision of how to develop browser and what kind of fetures develop first. But we give an opportynity for community to decide and vote with tokens what kind of browser we need to see in near future.
 
 ## Feeedback and bug collection
 
@@ -39,3 +39,15 @@ Blockchain data is too complicated and sometimes not obvious for people. Thus we
 1. Logical grouping for objects. Every app page has common groups of data (general, blockchain specific) for inheritance of views and better navigation or data observing.
 2. Classical accounting terms used for balance and cashflow operations. Blockahains use econimic principles for interaction between subjects thus we can describe such processes in established terms.
 3. Robohash logo for contracts entities. Contracts can act by themself, have and algorithms, so it's more natural to perceive them like robots instead of pieces of code.
+
+
+
+## 3. Development
+
+## 3.1 Shell development
+
+## 3.2 DApps development
+
+## 3.3 DApps deployment
+
+## 3.4 DApps interaction
