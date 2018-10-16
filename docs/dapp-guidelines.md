@@ -1,3 +1,8 @@
+# Contents
+
+1. Dapp structure
+2. Design & UX
+3. Development
 
 ## Contribution
 
