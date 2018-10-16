@@ -1,4 +1,20 @@
-# Cyb: Front door to blockchain universe
+# Cyb: web3 browser
+
+## Contents:
+
+1. Ovewview
+2. Principles
+3. Main page
+4. Navigation bar (back, DURI, forward)
+5. State bar (connectivity, web3 providers, sync state)
+6. Id bar (choose account or id provider) + keystorage
+7. Dapp bar (telegram or status like behavior) + dapp development
+8. Signer () and tx queue ()
+9. Root registry
+10. Computation limitation (docker)
+11. Permissions
+12. Core apps
+13. otifications
 
 # Overview
 
