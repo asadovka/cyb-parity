@@ -3,7 +3,7 @@
 
 ## 0. Overview
 
-Cyb is simply a web3 browser. You can read more about web3 and Dapps [here](cyb/docs/web3-vision.md) and [here](cyb/docs/dapp-guidelines.md)
+Cyb is simply a [web3](cyb/docs/web3-vision.md) browser.
 
 ## 1. Principles
 
@@ -68,6 +68,7 @@ Navigation bar in Cyb is based on such elements as:
 - back button - returns user to the previous state of web3 agent
 - DURA section - provides easy access to certain state of web3 agent
 - forward button - brings user to the future state
+- favorites button - pin liked web3 objects  
 
 As a knowledge graph, (cyberd)[cyberd doc] can analyze user's activity and make predictions of user behavior. Thus we can implement the "forward" button.
 
@@ -83,9 +84,39 @@ Search bar is used to browse inside blockchains, IPFS and DApps. It [web3 vision
 
 ## ID bar
 
-ID bar consists of account information, user logo, wallet, notifications.
+ID bar consists of account information, user logo, wallet, notifications and settings.
+
+Account info - account logo + address.
+Wallet button - link on wallet DApp.
+Notifications - for displaying all pending transactions and web3 events.
+Settings - for managing connection to IPFS, Ethereum and Cyber nodes (local or remote).
 
 ## DApp bar
+
+DApp bar is a place where user can quickly get access to most used web3 objects. User can pin such objects by clicking on button "favorite" on navigation bar and then it will appear in DApp bar.
+
+## Core Dapps
+
+For good initial experience we develop core browser DApps such as:
+
+- Ethereum wallet
+- Cyberd search app
+- Ethereum node status
+- Help app
+- App store
+- Contract development
+- Transaction queue
+- DApp method permissions
+
+These apps are delivered with every browser build.  
+
+## Transaction signer
+
+This feature allows users to sign single transactions or lists of transactions and brings web3 UX to the whole new level. Browser use own app for signing transactions so user can be always sure that transaction details are valid. Thus we decrease probability of phishing. Also browser has it's own key for signing big lists of transactions.
+
+## Permissions & limitations
+
+Web3 apps should strictly limited in computational resources. We describe detailed specifications [here](cyb/docs/dapp-guidelines.md).
 
 ## Root registry
 
