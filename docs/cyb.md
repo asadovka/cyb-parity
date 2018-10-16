@@ -16,59 +16,57 @@
 12. Core apps
 13. otifications
 
-# Overview
+# 0. Overview
 
-Cyb is a blockchain browser with integrated DApp platform. Browser consists of two main parts:
+Cyb is a web3 browser with integrated DApp platform. You can read more about web3 [here](cyb/docs/web3-vision.md)
+There are two main parts of browser:
 
 1. Shell, which alows:
 
-- search in blockchains and Dapps, and IPFS content
+- search data in blockchains, Dapps, and process content via IPFS
 - deploy and manage Dapps for users
-- show desync state of user and blockchain
+- manage sync state of nodes: IPFS, Ethereum and Cyber
 - manage user's account data (sign transactions, create custom feed)
 
 2. DApps, which:
 
-- use cyber.Search services for data obtaining (cyber.Search, cyber.Markets, cybernode)
-- are stored in IPFS
-- can interract with user and each other
+- provide full user experience in web3
+- can be available through IPFS
 
 
-# Principles
+# 1. Principles
 
-There are several key principles of cyb behavior, design and development.
+We adhere to such key principles of cyb behavior, design and development.
 
+## Respect users
 
-## 1. Users
+We focus on developers and advanced blockchain and IPFS users. But cyb is also friendly for everyone who wants to interact with consensus computers.
 
-We focus on developers and advanced blockchain users (Metamask users). But cyb is also friendly for everyone who wants to interact with consensus computers.
+## Anonimity
 
-### 1.1. User activity types
+We respect user's attitudes and principles. So we offer 3 clear custom types of activity tracking. 
 
-We respect user's attitude and principles. So we offer 3 clear custom types of user behavior:
-
-- public activity [address + events tracking]
+- public activity [user account address + events tracking]
 - private activity [abstract ID + events tracking ]
 - anonymous activity [no tracking at all]
 
-For successful browser development we need to collect at least public and private data. Thus users of these 2 groups well be incentivized by giving nice perks.
+By default all activity is anonymous. But for successful browser development we need to collect at least public and private data. Thus users of these 2 groups well be incentivized with tokens.
 
-### 1.2 User activity incentivization
+## Contribution
 
-We use full tokenization of processes (data obtain and transfer, content generation and adding).
+As an open source project we are welcome for contributions. 
 
-### 1.3 Contribution
+## Donation mechanism
 
-### 1.4 Donation mechanism
+We have our vision of how to develop browser and what kind of fetures develop first. But we give an opportynity for community to decide and vote with tokens what kind of browser we need to see in near future. 
 
-### 1.5 Feeedback and bug collection
+## Feeedback and bug collection
 
 We use user's feedback to make products better. So we provide options for bug reporting and feedback leaving on every page.
 
+## Design
 
-## 2. Design
-
-Cyb design process follows Web3 design principles
+Cyb design process follows Web3 design principles.
 
 ### 2.1. State rules
 
