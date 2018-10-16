@@ -1,20 +1,19 @@
 # A vision for web3
 @xhipster @asadovka
 
-Contents:
-
-1. Introduction
-2. Web2 paradigm
-3. Web3 paradigm
-4. Distributed Unified Resource Addresser 
-5. Root Registry
-6. Navigation
-7. Extensions
-8. References
-
-
 ## Introduction
-... Problematics
+
+Problematics is defined by video [need to transcript].
+Originally an idea of web3 was inspired by Gavin Wood http://gavwood.com/web3lt.html
+
+Original protocols of the Internet such as TCP/IP, DNS, URL and HTTPS brought a web into the point there it is now. With all created benefits they also brought problems. Globality being a key property of the the web since inception is under real threat. Speed of connections degrade with network grow and from ubiquitous government interventions into privacy and security of web users. One property, not obvious in the beginning, become really important with everyday usage of the Internet: its ability to exchange permanent hyperlinks thus they would not break after time have pass. Reliance on one at a time internet service provider architecture allow governments censor packets is the last straw in conventional web stack for every engineer who is concerned about the future of our children. Other properties while being not so critical are very desirable: offline and real-time. Average internet user being offline must have ability to work with the state it has and after acquiring connection being able to sync with global state and continue verify state's validity in realtime while having connection. Now this properties offered on app level while such properties must be integrated into lower level protocols.
+
+
+We can formalize main disadvantages of web2 paradigm:
+
+- Monopolization of traffic by tech companies (gateways, servers)
+- Monopolization of resources by tech companies (computing power, datacenters)
+- Monopolization of broadband sources such as ISP providers
 
 
 
