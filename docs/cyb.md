@@ -1,13 +1,11 @@
 # Cyb: web3 browser
 
 
-## 0. Overview
+## Overview
 
 Cyb is simply a [web3](cyb/docs/web3-vision.md) browser.
 
-## 1. Principles
-
-## Agent respect
+## Principle of respect to agent
 
 In web3 this is the most fundamental principle. We focus on developers and advanced blockchain users who is able to work with private keys and transaction. But Cyb is also friendly for everyone who wants to interact with consensus computers in a web of third generation.
 
@@ -20,19 +18,7 @@ We respect agent attitude and principles. So we offer 3 clear custom types of us
 By default all activity is anonymous. Others must be explicitly asks permissions.
 For successful browser development application developers need to collect at least public and private data. Thus users of these 2 groups will be incentivized by giving nice perks from dapp developers.
 
-## Contributions
-
-As an open source project we are welcome for contributions. Gitcoin is an excellent instrument that we use for delegating tasks for community a processing payments for completed ones.
-
-## Feature development
-
-We have our vision of how to develop browser and what kind of features develop first. But we give an opportunity for community to decide and vote with tokens what kind of browser we need to see in near future. Our product [Chaingear](https://github.com/cybercongress/chaingear) is also made for this.
-
-## Feedback and bug collection
-
-We use user's feedback to make products better. So we provide options for bug reporting and feedback leaving on every page.
-
-## 2. Cyb concepts
+## Cyb concepts
 
 Browser shell consists of the following concepts:
 
@@ -41,15 +27,14 @@ Browser shell consists of the following concepts:
 - State bar
 - Search bar
 - ID bar
-- DApp bar
-- Core DApps
+- App bar
+- Core apps
 - Notifications
 - Transaction signer
 - Root registry
-- Permissions & limitations
+- Permissions
 
 Let us describe in details every concept.
-
 
 ## Main Page
 
@@ -118,10 +103,6 @@ These apps are delivered with every browser build.
 
 This feature allows users to sign single transactions or lists of transactions and brings web3 UX to the whole new level. Browser use own app for signing transactions so user can be always sure that transaction details are valid. Thus we decrease probability of phishing. Also browser has it's own key for signing big lists of transactions.
 
-## Permissions & limitations
-
-Web3 apps should strictly limited in computational resources. We describe detailed specifications [here](cyb/docs/dapp-guidelines.md).
-
 ## Root registry
 
 Root registry of Cyb is a hard mix between top-level domains and file extensions.
@@ -140,3 +121,19 @@ Tokens:
 
 Tlds:
 1000 (100) Write a program that is able to display web2 sites. Map all iana tlds to this programm https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains http://data.iana.org/TLD/tlds-alpha-by-domain.txt
+
+## Permissions
+
+Web3 apps should strictly limited in computational resources. We describe detailed specifications [here](cyb/docs/dapp-guidelines.md).
+
+## Contributions
+
+As an open source project we are welcome for contributions. Gitcoin is an excellent instrument that we use for delegating tasks for community a processing payments for completed ones.
+
+## Feature development
+
+We have our vision of how to develop browser and what kind of features develop first. But we give an opportunity for community to decide and vote with tokens what kind of browser we need to see in near future. Our product [Chaingear](https://github.com/cybercongress/chaingear) is also made for this.
+
+## Feedback and bug collection
+
+We use user's feedback to make products better. So we provide options for bug reporting and feedback leaving on every page.
