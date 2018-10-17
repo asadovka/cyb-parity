@@ -1,6 +1,5 @@
 # Cyb: web3 browser
 
-@xhipster @asadovka
 
 ## 0. Overview
 
@@ -83,14 +82,22 @@ Currently we use Ethereum, IPFS, and Cyber nodes. Browser can show sync state wi
 
 Search bar is used to browse inside blockchains, IPFS and DApps. It [web3 vision doc](cyb/docs/web3-vision.md) we describe concepts of web3 browsing in details.
 
+We add "dot" to search query to manage type of search. All data after "dot" corresponds to DApp, and all data before "dot" is a query parameter.
+
+For example:
+
+".help" query will open Help DApp. "chaingear.help" will open chaingear info page in Help DApp. Query without "dot" will be automatically redirected to search in cyberd (Note: you can also search in cyberd by typing "$yourquery$.cyber").
+
+Empty query always leads to the main page.
+
 ## ID bar
 
 ID bar consists of account information, user logo, wallet, notifications and settings.
 
-Account info - account logo + address.
-Wallet button - link on wallet DApp.
-Notifications - for displaying all pending transactions and web3 events.
-Settings - for managing connection to IPFS, Ethereum and Cyber nodes (local or remote).
+Account panel consists of generated address logo and address hash itself. We support multiple accounts so there is an ability to switch quickly betwen them ritgh from the account panel.
+Wallet button simply leads to our DApp wallet.
+Notification panel displaying all pending transactions and web3 events corresponding to certain account.
+Settings button leads to settings page where user can manage connection to IPFS, Ethereum and Cyber nodes (local or remote ways).
 
 ## DApp bar
 
@@ -138,24 +145,3 @@ Tokens:
 Tlds:
 1000 (100) Write a program that is able to display web2 sites. Map all iana tlds to this programm https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains http://data.iana.org/TLD/tlds-alpha-by-domain.txt
 
-
-
-
-
-
-
-
-
-
-There are two main parts of browser:
-
-1. Shell, which alows:
-
-- deploy and manage Dapps for users
-- manage sync state of nodes: IPFS, Ethereum and Cyber
-- manage user's account data (sign transactions, create custom feed)
-
-2. DApps, which:
-
-- provide full user experience in web3
-- can be available through IPFS
