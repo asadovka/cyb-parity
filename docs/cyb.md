@@ -53,34 +53,22 @@ Let us describe in details every concept.
 
 ## Main Page
 
-Main page of the browser consists of three main parts:
+Main page of the browser consists of three main elements:
 
-- search bar, that provides all search functions
-- "most use" tabs, which are based on popular account activity and are unique for every account
-- links of Congress' products, which are useful to contributors
+- search bar: provides all search functions
+- relevance bar: the most relevant cyberlinks for a particular agent
+- footer: cyberlinks to ecosystem resources which are important for education and contribution
 
 ## Navigation bar
 
-In web3 all data has a definite state, so it become easier to navigate through it and make UX better.  
-
-Navigation bar in Cyb is based on such elements as:
+Navigation bar in Cyb is based on the following elements:
 
 - back button - returns user to the previous state of web3 agent
-- DURA section - provides easy access to certain state of web3 agent
-- forward button - brings user to the future state
-- favorites button - pin liked web3 objects  
+- search bar - provides easy access to certain state of web3 agent
+- favourites button - pin cyberlinks
+- forward button - brings user to the future state based on Cyb prediction
 
-As a knowledge graph, (cyberd)[cyberd doc] can analyze user's activity and make predictions of user behavior. Thus we can implement the "forward" button.
-
-## State bar
-
-To be sure that you are working with actual state browser needs to manage connection to web3 providers.
-
-Currently we use Ethereum, IPFS, and Cyber nodes. Browser can show sync state with that nodes, display connection state (local, remote, no connection) and give an ability for user to chose own web3 provider.
-
-## Search bar
-
-Search bar is used to browse inside blockchains, IPFS and DApps. It [web3 vision doc](cyb/docs/web3-vision.md) we describe concepts of web3 browsing in details.
+Search bar is used to browse inside blockchains, IPFS and DApps. It [web3 vision doc](cyb/docs/web3-vision.md) we describe concepts of web3 browsing in details using DURA specs.
 
 We add "dot" to search query to manage type of search. All data after "dot" corresponds to DApp, and all data before "dot" is a query parameter.
 
@@ -89,6 +77,14 @@ For example:
 ".help" query will open Help DApp. "chaingear.help" will open chaingear info page in Help DApp. Query without "dot" will be automatically redirected to search in cyberd (Note: you can also search in cyberd by typing "$yourquery$.cyber").
 
 Empty query always leads to the main page.
+
+## State bar
+
+In web3 all data has the state, so it become easier to navigate through it and make UX better.   To be sure that you are working with actual state browser needs to manage connection to web3 providers.
+
+Our purpose is to build web3 browser that is agnostic from addressing, identity and consensus protocols. But currently we use ipfs, parity-light and cyberd nodes to show off possible experience at early stage without necessity to connect to web3 provider at all (be your own web3 provider) for basic needs such as popular static content surfing and simple transfers of tokens.
+
+Cyb is hiding all complexities of web3 connections under one colorful indicator that range from green to red. Ideally it works like indicator of internet connection we use to. Clicking on this indicator give an ability for agent to understand status of connection and chose own web3 provider.
 
 ## ID bar
 
@@ -99,24 +95,24 @@ Wallet button simply leads to our DApp wallet.
 Notification panel displaying all pending transactions and web3 events corresponding to certain account.
 Settings button leads to settings page where user can manage connection to IPFS, Ethereum and Cyber nodes (local or remote ways).
 
-## DApp bar
+## App bar
 
 DApp bar is a place where user can quickly get access to most used web3 objects. User can pin such objects by clicking on button "favorite" on navigation bar and then it will appear in DApp bar.
 
-## Core Dapps
+## Core apps
 
-For good initial experience we develop core browser DApps such as:
+For good initial experience we develop core browser apps such as:
 
-- Ethereum wallet
+- App store
 - Cyberd search app
+- Ethereum wallet
 - Ethereum node status
 - Help app
-- App store
-- Contract development
-- Transaction queue
-- DApp method permissions
+- Contract development tool
+- Signer with transaction queue
+- Permission management
 
-These apps are delivered with every browser build.  
+These apps are delivered with every browser build.
 
 ## Transaction signer
 
@@ -144,4 +140,3 @@ Tokens:
 
 Tlds:
 1000 (100) Write a program that is able to display web2 sites. Map all iana tlds to this programm https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains http://data.iana.org/TLD/tlds-alpha-by-domain.txt
-
