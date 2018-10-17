@@ -35,7 +35,7 @@ You can also use our Help DApp (cyb://.help/create) for more info.
 When you are ready with development of your app you can easely publish it to the DApp Store so every user of Cyb will see it. 
 Open your app, click on "deploy" button and enter IPFS hash of your app. Sign the transaction - your app will be registred in Chaingear. And that is it!
 
-# 4. DApp Design
+# 4. DApp design
 
 DApp design process follows Web3 design principles.
 
